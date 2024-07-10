@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Taxas de Comissão para Marketplaces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Taxas de Comissão para Marketplaces</h1>
+    <form id="calcForm">
+      <label for="valorVenda">Valor de Venda do Produto:</label>
+<input type="text" id="valorVenda" required pattern="[0-9]+(\.[0-9]+)?" title="Digite um número válido">
+
+<label for="taxaComissao">Taxa de Comissão do Marketplace (em %):</label>
+<input type="text" id="taxaComissao" required pattern="[0-9]+(\.[0-9]+)?" title="Digite um número válido">
+
+<label for="tarifaFixa">Tarifa Fixa do Marketplace:</label>
+<input type="text" id="tarifaFixa" required pattern="[0-9]+(\.[0-9]+)?" title="Digite um número válido">
+
+<button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado" class="hidden">
+      <h2>Resultado:</h2>
+      <p><strong>Valor Líquido do Vendedor:</strong> <span id="valorLiquido"></span></p>
+      <p><strong>Valor Perdido nas Taxas:</strong> <span id="valorPerdido"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
